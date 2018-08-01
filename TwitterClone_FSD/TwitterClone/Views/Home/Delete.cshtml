@@ -1,0 +1,41 @@
+﻿@model TwitterClone.UI.Models.TweetVM
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">Delete Tweet</a>
+                </li>
+                <li class="breadcrumb-item active" style="color: #6c757d !important">Are you sure you want to delete this Tweet?</li>
+            </ol>
+            @Html.HiddenFor(model => model.Tweet_Id)
+            @Html.HiddenFor(model => model.UserId)
+            @Html.HiddenFor(model => model.created)
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fa fa-twitter"></i>What's happening?
+                </div>
+                <div class="card-body">
+                    @Html.TextAreaFor(model => model.message, new { @class = "form-control" })
+                    <div>
+
+                        <p>
+                            <input type="submit" value="Delete" class="btn btn-danger" />
+
+                            @Html.ActionLink("Cancel / Back to Home", "Index")
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

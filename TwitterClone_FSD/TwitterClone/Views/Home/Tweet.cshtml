@@ -1,0 +1,37 @@
+﻿@model IEnumerable<TwitterClone.DataLayer.Tweet>
+
+@{
+    ViewBag.Title = "Tweet";
+}
+@foreach (var item in Model)
+{ <a class="list-group-item list-group-item-action" href="#">
+        <div class="media">
+            <img src="~/Images/Twitter_Logo_Blue.png" width="50" />
+            <div class="media-body" style="margin-left:10px">
+                <span>
+                    <strong>@Html.DisplayFor(modelItem => item.UserId)</strong>
+                </span>
+                <p>
+                    @Html.DisplayFor(modelItem => item.message)
+                </p>
+                <div class="text-muted smaller">
+                    <table>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.created)
+                            </td>
+                            @if (item.UserId == Session["UserId"].ToString())
+                            {
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.Tweet_Id }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.Tweet_Id })
+
+                                </td>
+                            }
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </a>
+}

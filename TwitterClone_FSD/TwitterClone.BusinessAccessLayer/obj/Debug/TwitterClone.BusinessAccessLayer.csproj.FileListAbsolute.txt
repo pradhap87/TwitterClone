@@ -1,0 +1,11 @@
+C:\Users\436812\Source\Workspaces\MyFirstProject\TwitterClone_FSD\TwitterClone.BusinessAccessLayer\bin\Debug\TwitterClone.BusinessAccessLayer.dll.config
+C:\Users\436812\Source\Workspaces\MyFirstProject\TwitterClone_FSD\TwitterClone.BusinessAccessLayer\bin\Debug\TwitterClone.BusinessAccessLayer.dll
+C:\Users\436812\Source\Workspaces\MyFirstProject\TwitterClone_FSD\TwitterClone.BusinessAccessLayer\bin\Debug\TwitterClone.BusinessAccessLayer.pdb
+C:\Users\436812\Source\Workspaces\MyFirstProject\TwitterClone_FSD\TwitterClone.BusinessAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\436812\Source\Workspaces\MyFirstProject\TwitterClone_FSD\TwitterClone.BusinessAccessLayer\bin\Debug\TwitterClone.DataLayer.dll
+C:\Users\436812\Source\Workspaces\MyFirstProject\TwitterClone_FSD\TwitterClone.BusinessAccessLayer\bin\Debug\TwitterClone.DataLayer.pdb
+C:\Users\436812\Source\Workspaces\MyFirstProject\TwitterClone_FSD\TwitterClone.BusinessAccessLayer\bin\Debug\TwitterClone.DataLayer.dll.config
+C:\Users\436812\Source\Workspaces\MyFirstProject\TwitterClone_FSD\TwitterClone.BusinessAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\436812\Source\Workspaces\MyFirstProject\TwitterClone_FSD\TwitterClone.BusinessAccessLayer\obj\Debug\TwitterClone.BusinessAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\436812\Source\Workspaces\MyFirstProject\TwitterClone_FSD\TwitterClone.BusinessAccessLayer\obj\Debug\TwitterClone.BusinessAccessLayer.dll
+C:\Users\436812\Source\Workspaces\MyFirstProject\TwitterClone_FSD\TwitterClone.BusinessAccessLayer\obj\Debug\TwitterClone.BusinessAccessLayer.pdb

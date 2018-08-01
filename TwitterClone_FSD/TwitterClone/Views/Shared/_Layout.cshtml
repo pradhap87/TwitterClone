@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - Twitter Clone</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/CSS/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/CSS/datatables/dataTables.bootstrap4.css" rel="stylesheet" />
+    <link href="~/Content/CSS/sb-admin.css" rel="stylesheet" />
+    <style type="text/css">
+        .nav-link a, li {
+            color: white !important;
+        }
+
+        .navbar-sidenav {
+            background: white !important;
+        }
+
+            .navbar-sidenav li {
+                color: black !important;
+            }
+        img {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="fixed-nav" id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="mainNav">
+
+        <a class="navbar-brand" href="#"><span class="fa fa-fw fa-twitter"></span>
+            Twitter Clone</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item nav-link">
+                    <span class="fa fa-fw fa-home"></span>
+                    @Html.ActionLink("Home", "Index", "Home")
+                </li>
+                <li class="nav-item nav-link">
+                    <span class="fa fa-fw fa-user"></span>
+                    @Html.ActionLink("Profile", "TweeterProfile", "User")
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item nav-link">Welcome @Session["UserName"] !
+                </li>
+                <li class="nav-item nav-link">
+                    <i class="fa fa-fw fa-sign-out"></i>
+                    @Html.ActionLink("Logout", "Index", "User")
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content-wrapper">
+        <div id="body" class="container-fluid">
+            @RenderSection("featured", required: false)
+
+            @RenderBody()
+
+        </div>
+        @*<!-- /.container-fluid-->
+        <!-- /.content-wrapper-->
+        <footer>
+            <div class="container">
+                <div class="text-center">
+                    <small>@DateTime.Now.Year - Twitter Clone</small>
+                </div>
+            </div>
+        </footer>*@
+        
+    </div>
+
+</body>
+</html>

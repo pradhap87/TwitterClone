@@ -1,0 +1,63 @@
+﻿@model TwitterClone.DataLayer.Person
+
+@{
+    ViewBag.Title = "SignUp - Twitter Clone";
+    Layout = "~/Views/Shared/_SignupLayout.cshtml";
+    var data = ViewBag.Message;
+}
+
+<div class="card-header"><span class="fa fa-fw fa-twitter"></span> Join My Twitter Clone</div>
+
+@using (Html.BeginForm())
+{
+    @*@Html.ValidationSummary(true)*@
+
+  
+    <div class="card-body">
+        <form id="signup_form" method="post" action="">
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        User Id
+                        @Html.TextBoxFor(model => model.UserId, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.UserId)
+                    </div>
+                    <div class="col-md-6">
+                        Password
+                        @Html.PasswordFor(model => model.Pwd, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Pwd)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        @Html.LabelFor(model => model.Name)
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Name)
+                    </div>
+                    <div class="col-md-6">
+                        @Html.LabelFor(model => model.Email)
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Email)
+                    </div>
+                </div>
+            </div>
+            
+            <p>
+                <input type="submit" id="Signup" value="SignUp" class="btn btn-primary btn-block" /> @data
+            </p>
+        </form>
+        <div class="text-center">
+            
+            @Html.ActionLink("Login", "Login", new { @class = "d-block small mt-3" }) | 
+            @Html.ActionLink("Home", "Index", new { @class = "d-block small mt-3" })
+            <hr />            
+            <span class="text-center">©Twitter Clone - Prathap Mathiyalagan</span>
+        </div>
+    </div>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

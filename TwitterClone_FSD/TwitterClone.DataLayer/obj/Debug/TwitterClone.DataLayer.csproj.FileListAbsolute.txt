@@ -1,0 +1,8 @@
+C:\Users\436812\Source\Workspaces\MyFirstProject\TwitterClone_FSD\TwitterClone.DataLayer\bin\Debug\TwitterClone.DataLayer.dll.config
+C:\Users\436812\Source\Workspaces\MyFirstProject\TwitterClone_FSD\TwitterClone.DataLayer\bin\Debug\TwitterClone.DataLayer.dll
+C:\Users\436812\Source\Workspaces\MyFirstProject\TwitterClone_FSD\TwitterClone.DataLayer\bin\Debug\TwitterClone.DataLayer.pdb
+C:\Users\436812\Source\Workspaces\MyFirstProject\TwitterClone_FSD\TwitterClone.DataLayer\bin\Debug\EntityFramework.dll
+C:\Users\436812\Source\Workspaces\MyFirstProject\TwitterClone_FSD\TwitterClone.DataLayer\bin\Debug\EntityFramework.xml
+C:\Users\436812\Source\Workspaces\MyFirstProject\TwitterClone_FSD\TwitterClone.DataLayer\obj\Debug\TwitterClone.DataLayer.dll
+C:\Users\436812\Source\Workspaces\MyFirstProject\TwitterClone_FSD\TwitterClone.DataLayer\obj\Debug\TwitterClone.DataLayer.pdb
+C:\Users\436812\Source\Workspaces\MyFirstProject\TwitterClone_FSD\TwitterClone.DataLayer\obj\Debug\TwitterClone.DataLayer.csprojResolveAssemblyReference.cache

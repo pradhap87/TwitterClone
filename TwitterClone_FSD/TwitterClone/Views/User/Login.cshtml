@@ -1,0 +1,44 @@
+﻿@model TwitterClone.UI.Models.PersonVM
+
+@{
+    ViewBag.Title = "Login - Twitter Clone";
+    Layout = "~/Views/Shared/_SignupLayout.cshtml";
+}
+@{
+    var data = ViewBag.Message;
+}
+
+@using (Html.BeginForm())
+{
+    <div class="card-header"><span class="fa fa-fw fa-twitter"></span> Login</div>
+    <div class="card-body">
+        <form>
+            <div class="form-group">
+                <label for="UserID">User Id</label>
+                @Html.TextBoxFor(model => model.UserId, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.UserId)
+            </div>
+            <div class="form-group">
+                <label for="Password">Password</label>
+                @Html.PasswordFor(model => model.Pwd, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Pwd)
+            </div>
+            <input type="submit" value="LogIn" class="btn btn-primary btn-block" />
+        </form>
+        <div class="text-center">
+            <hr />
+            @Html.ActionLink("Register an Account", "Create", new { @class = "d-block small mt-3" }) | 
+            @Html.ActionLink("Home", "Index", new { @class = "d-block small mt-3" })
+        
+        </div>
+        @data
+        <hr />
+        <span class="text-center">©Twitter Clone - Prathap Mathiyalagan</span>
+    </div>
+}
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+

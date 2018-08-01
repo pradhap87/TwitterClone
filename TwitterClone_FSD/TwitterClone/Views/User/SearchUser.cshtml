@@ -1,0 +1,69 @@
+﻿@model TwitterClone.UI.Models.PersonVM
+
+@{
+    ViewBag.Title = "SearchUser";
+    var follow = Model.followstatus;
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.Active)
+    @Html.HiddenFor(model => model.Joined)
+    @Html.HiddenFor(model => model.UserId)
+    @Html.HiddenFor(model => model.Pwd)
+    @Html.HiddenFor(model => model.ProfileImage)
+    <div class="container" style="padding-top: 60px;">
+        <h1 class="page-header">Searched Profile</h1>
+        <hr />
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="text-center">
+                    <img src="@Model.ProfileImage" class="img-thumbnail img-responsive" alt="">
+                </div>
+            </div>
+            <!-- edit form column -->
+            <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+                <h3>Personal info</h3>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Name:</label>
+                        <div class="col-lg-8">
+                            @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ValidationMessageFor(model => model.Name)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Email:</label>
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ValidationMessageFor(model => model.Email)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label"></label>
+                        @if (follow == "false")
+                        {
+
+                            <div class="col-md-8">
+                                <input class="btn btn-primary" value="Follow" type="submit" formaction="FollowUser">
+                            </div>
+                        }
+                        else
+                        {
+
+                            <div class="col-md-8">
+                                <input class="btn btn-primary" value="Un - Follow" type="submit" formaction="Un_FollowUser">
+                            </div>
+                        }
+                    </div>
+                    <div class="col-md-offset-2 col-md-10 text-success">
+                        @Html.DisplayFor(model => model.status)
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+}

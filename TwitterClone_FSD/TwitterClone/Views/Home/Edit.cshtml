@@ -1,0 +1,41 @@
+﻿@model TwitterClone.UI.Models.TweetVM
+
+@{
+    ViewBag.Title = "Edit Tweet - Twitter Clone";    
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+  
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">Edit Tweet</a>
+                </li>
+                <li class="breadcrumb-item active" style="color: #6c757d !important">@Session["UserName"]</li>
+            </ol>
+
+            @Html.HiddenFor(model => model.Tweet_Id)
+            @Html.HiddenFor(model => model.UserId)
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fa fa-twitter"></i> @Html.LabelFor(model => model.message)
+                </div>
+                <div class="card-body">
+                    @Html.TextAreaFor(model => model.message, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.message)
+                    
+                </div>
+                <div class="card-footer">
+                    @Html.ActionLink("Cancel / Back to Home", "Index")
+                        <input type="submit" value="Save" class="float-right btn btn-success" />
+                    </div>
+            </div>
+        </div>
+    </div>
+  
+}
+

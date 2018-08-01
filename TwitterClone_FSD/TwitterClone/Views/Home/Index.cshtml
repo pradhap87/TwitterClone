@@ -1,0 +1,103 @@
+﻿@model TwitterClone.UI.Models.TweetVM
+
+@{
+    ViewBag.Title = "Home - Twitter Clone";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">Home</a>
+                </li>
+                <li class="breadcrumb-item active" style="color: #6c757d !important">@Session["UserName"]</li>
+            </ol>
+            <!-- Icon Cards-->
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white bg-primary o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fa fa-fw fa-twitter"></i>
+                            </div>
+                            <div class="mr-5"><h3>@Session["TotalTwittes"].ToString() Tweets!</h3></div>
+                        </div>
+         
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white bg-warning o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fa fa-fw fa-list"></i>
+                            </div>
+                            <div class="mr-5"><h3>@Session["Following"].ToString()  Following!</h3></div>
+                        </div>
+    
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white bg-success o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fa fa-fw fa-retweet"></i>
+                            </div>
+                            <div class="mr-5"><h3>@Session["Followers"].ToString() Followers!</h3></div>
+                        </div>
+   
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white bg-danger o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fa fa-fw fa-user-o"></i>
+                            </div>
+                            <div class="mr-5"><h6>Search Users!</h6></div>
+                        </div>
+                        <div class="mr-5">
+                            <div class="input-group custom-search-form">                                
+                                @Html.TextBoxFor(model => model.Search_User, new { @class = "form-control" })                                
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit" formaction="User/SearchUser">                                        
+                                        <i class="fa fa-search"></i>
+                                    </button>                                    
+                                </span>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+            <!-- Area Chart Example-->
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fa fa-twitter"></i>What's happening?
+                </div>
+                <div class="card-body">
+                    @Html.TextAreaFor(model => model.message, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.message)
+                    @Html.ValidationSummary()
+                </div>
+                <div class="card-footer">
+                    <input type="submit" value="Twitter" class="float-right btn btn-success" />
+                </div>
+            </div>
+
+            <div class="card mb-3">
+
+                <div class="card-body">
+                    @{
+                        Html.RenderAction("Tweet");
+                    }
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+}

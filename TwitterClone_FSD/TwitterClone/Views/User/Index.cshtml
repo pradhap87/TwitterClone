@@ -1,0 +1,70 @@
+﻿@model TwitterClone.UI.Models.PersonVM
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Twitter Clone</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/CSS/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/CSS/datatables/dataTables.bootstrap4.css" rel="stylesheet" />
+    <link href="~/Content/CSS/sb-admin.css" rel="stylesheet" />
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+
+        <div class="container" style="padding-top: 60px;">
+            <span class="fa fa-fw fa-twitter"></span> <span>Twitter Clone </span>
+            <span class="float-lg-right">
+                See what’s happening in the world right now
+            </span>
+            <hr />
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div style="margin-top:100px">
+                        <img src="~/Images/Twitter_Logo_Blue.png" />
+
+                    </div>
+                </div>
+                <!-- edit form column -->
+                <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group" style="margin-top:170px">
+
+                            <div class="col-lg-8">
+                                <h2>Join Twitter clone today.</h2>
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <div class="col-md-8">
+                                <input type="submit" value="SignUp" formmethod="get" class="btn btn-primary btn-block" formaction="User\Create"/>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <div class="col-md-8">
+                                <input type="submit" formmethod="get" value="LogIn" class="btn btn-success btn-block" formaction="User\Login"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr />
+            <span class="text-center">©Tweeter Clone - Prathap Mathiyalagan</span>
+        </div>
+    }
+
+</body>
+</html>
